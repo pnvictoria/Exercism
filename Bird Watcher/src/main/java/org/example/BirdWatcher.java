@@ -30,7 +30,7 @@ public class BirdWatcher {
     }
 
     public int getBusyDays() {
-        return (int) Arrays.stream(birdsPerDay).filter(a -> a >= 5).count();
+        return (int)Arrays.stream(birdsPerDay).filter(a -> a >= 5).count();
     }
 
     @Override
