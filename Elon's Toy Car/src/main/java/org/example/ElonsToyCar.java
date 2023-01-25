@@ -18,12 +18,17 @@ public class ElonsToyCar {
     }
 
     public String batteryDisplay() {
-        return "Battery at " + battery + "%";
+        if (battery == 0) {
+            return "Battery empty";
+        }
+        return String.format("Battery at %d%%", battery);
     }
 
     public void drive() {
-        distanse += 20;
-        battery -= 1;
+        if (battery != 0) {
+            distanse += 20;
+            battery -= 1;
+        }
     }
 }
 
