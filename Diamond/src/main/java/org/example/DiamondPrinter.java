@@ -3,16 +3,14 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Diamond {
+class DiamondPrinter {
     public List<String> printToList(char c) {
         List<String> list = new ArrayList<String>();
         int boxsize = (c - 'A') * 2 + 1;
         int midpoint = boxsize / 2 + 1;
-
         for (int row = 0; row < midpoint; row++) {
             list.add(buildRow(row, boxsize, c));
         }
-
         for (int row = midpoint - 2; row >= 0; row--) {
             list.add(list.get(row));
         }
@@ -30,3 +28,4 @@ public class Diamond {
         return sb.toString();
     }
 }
+
